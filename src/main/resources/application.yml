@@ -13,7 +13,7 @@ server:
       sun:
         faces:
           forceLoadConfiguration: true
-          injectionProvider: com.miselmesnjak.sbpft1.jsf.providers.SpringInjectionProvider
+#          injectionProvider: com.miselmesnjak.sbpft1.jsf.providers.SpringInjectionProvider
 
 #spring:
 #  # DB connection properties

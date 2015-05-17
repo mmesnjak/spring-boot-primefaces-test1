@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+	<title>HRZZ - SPP</title>
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north">
+			<p:panel id="pnlMenu">
+				<h:form>
+					<p:menubar id="main_menu">
+						<p:menuitem value="JSF Bean Filter"
+							actionListener="#{menuController.jsfFilter}" update="pnlContent" />
+						<p:menuitem value="Spring Bean Filter"
+							actionListener="#{menuController.springFilter}"
+							update="pnlContent" />
+					</p:menubar>
+				</h:form>
+			</p:panel>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			<p:panel id="pnlContent">
+				<ui:include src="partials/#{menuController.pageId}.xhtml" />
+			</p:panel>
+		</p:layoutUnit>
+
+	</p:layout>
+</h:body>
+</html>
