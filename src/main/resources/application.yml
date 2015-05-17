@@ -1,0 +1,33 @@
+server: 
+  port: 8888
+  context-parameters:
+    primefaces:
+      THEME: bootstrap
+      CLIENT_SIDE_VALIDATION: true
+      FONT_AWESOME: true
+      UPLOADER: commons
+    javax:
+      faces:
+        FACELETS_SKIP_COMMENTS: true
+    com:
+      sun:
+        faces:
+          forceLoadConfiguration: true
+          injectionProvider: com.miselmesnjak.sbpft1.jsf.providers.SpringInjectionProvider
+
+#spring:
+#  # DB connection properties
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.23.250:3306/hrzzspp?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&characterSetResults=UTF-8
+#    username: hrzzspp
+#    password: hrzzspp
+#  # JPA properties
+#  jpa:
+##    database: MYSQL
+##    generateDdl: false
+#    showSql: false    
+    
+security:
+  user:
+    password: user
